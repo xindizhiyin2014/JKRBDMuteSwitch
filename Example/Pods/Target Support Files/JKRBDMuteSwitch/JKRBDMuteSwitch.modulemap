@@ -1,0 +1,6 @@
+framework module JKRBDMuteSwitch {
+  umbrella header "JKRBDMuteSwitch-umbrella.h"
+
+  export *
+  module * { export * }
+}

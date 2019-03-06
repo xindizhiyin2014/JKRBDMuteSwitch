@@ -1,0 +1,6 @@
+framework module Pods_JKRBDMuteSwitch_Tests {
+  umbrella header "Pods-JKRBDMuteSwitch_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

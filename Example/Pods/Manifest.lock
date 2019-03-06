@@ -1,0 +1,27 @@
+PODS:
+  - JKRBDMuteSwitch (0.1.0):
+    - JKSandBoxManager
+  - JKSandBoxManager (0.1.6.2)
+  - Kiwi (3.0.0)
+
+DEPENDENCIES:
+  - JKRBDMuteSwitch (from `../`)
+  - Kiwi
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JKSandBoxManager
+    - Kiwi
+
+EXTERNAL SOURCES:
+  JKRBDMuteSwitch:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JKRBDMuteSwitch: b211bcdaede4f071e2e0a0a098d9caba46092d67
+  JKSandBoxManager: d4d90f580ea2974610fc5436135557dbc5801938
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+
+PODFILE CHECKSUM: a19bedb4fd2238ead228d6130a87ba358458b077
+
+COCOAPODS: 1.5.3

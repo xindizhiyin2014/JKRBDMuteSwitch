@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		077955BC25F556DA0D8B78F7 /* JKRBDMuteSwitch.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JKRBDMuteSwitch.podspec; path = ../JKRBDMuteSwitch.podspec; sourceTree = "<group>"; };
+		077955BC25F556DA0D8B78F7 /* JKRBDMuteSwitch.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKRBDMuteSwitch.podspec; path = ../JKRBDMuteSwitch.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3554F6A7EFC2BAC239307075 /* Pods_JKRBDMuteSwitch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKRBDMuteSwitch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		56492B2EC1670EDDEC035A8F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		56492B2EC1670EDDEC035A8F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5F81D40658DAA36C06F8EA3A /* Pods-JKRBDMuteSwitch_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKRBDMuteSwitch_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKRBDMuteSwitch_Tests/Pods-JKRBDMuteSwitch_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JKRBDMuteSwitch_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKRBDMuteSwitch_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E19747E2F7B7B24D26AEA454 /* Pods_JKRBDMuteSwitch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKRBDMuteSwitch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50A4EFE7C24C3057FE2268A /* Pods-JKRBDMuteSwitch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKRBDMuteSwitch_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKRBDMuteSwitch_Example/Pods-JKRBDMuteSwitch_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E5CA2684165EA0FB6C6628FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E5CA2684165EA0FB6C6628FA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F7F51DF421B155EDA25EC787 /* Pods-JKRBDMuteSwitch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKRBDMuteSwitch_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKRBDMuteSwitch_Example/Pods-JKRBDMuteSwitch_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -349,12 +349,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JKRBDMuteSwitch_Example/Pods-JKRBDMuteSwitch_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JKRBDMuteSwitch/JKRBDMuteSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/JKSandBoxManager/JKSandBoxManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKRBDMuteSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKSandBoxManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
