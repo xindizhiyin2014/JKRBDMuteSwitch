@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'JKRBDMuteSwitch_Example' do
+  pod 'JKRBDMuteSwitch', :path => '../'
+
+  target 'JKRBDMuteSwitch_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end
