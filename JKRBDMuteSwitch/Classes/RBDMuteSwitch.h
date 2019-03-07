@@ -47,5 +47,6 @@ static NSString * const JKRBDMuteSwitchPodName = @"JKRBDMuteSwitch";
  */ 
 - (void)detectMuteSwitch;
 
-- (void)closeMuteListen;
+- (void)closeMuteListening;
+
 @end

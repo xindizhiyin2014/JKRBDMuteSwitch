@@ -23,16 +23,6 @@ static RBDMuteSwitch *_sharedInstance;
     return _sharedInstance;
 }
 
-- (id)init
-{
-	self = [super init];
-	if (self) {
-	}
-	
-	return self;
-}
-
-
 - (void)playbackComplete {
     if ([(id)self.delegate respondsToSelector:@selector(isMuted:)]) {
         // If playback is far less than 100ms then we know the device is muted
@@ -43,8 +33,7 @@ static RBDMuteSwitch *_sharedInstance;
              [delegate isMuted:NO];
         }
     }
-    
-    
+    [self closeMuteListening];
 }
 
 static void soundCompletionCallback (SystemSoundID mySSID, void* myself) {
@@ -71,7 +60,7 @@ static void soundCompletionCallback (SystemSoundID mySSID, void* myself) {
     soundDuration = 0.0;
 //    CFURLRef        soundFileURLRef;
     SystemSoundID	soundFileObject;
-    NSURL *fileURL= [JKSandBoxManager fileURLWithBundleName:JKRBDMuteSwitchPodName fileName:@"detection.aiff" podName:JKRBDMuteSwitchPodName];
+    NSURL *fileURL= [JKSandBoxManager fileURLWithBundleName:JKRBDMuteSwitchPodName fileName:@"detection.aiff" podName:nil];
     // Get the URL to the sound file to play
 
     
@@ -86,8 +75,8 @@ static void soundCompletionCallback (SystemSoundID mySSID, void* myself) {
                                            (__bridge void*) self);
     
     // Start the playback timer
-    NSTimer *backTimer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(incrementTimer) userInfo:nil repeats:YES];
-    [backTimer fire];
+    playbackTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(incrementTimer) userInfo:nil repeats:YES];
+    
 	// Play the sound
     AudioServicesPlaySystemSound(soundFileObject);
     return;
@@ -109,9 +98,12 @@ static void soundCompletionCallback (SystemSoundID mySSID, void* myself) {
 #endif
 }
 
-- (void)closeMuteListen{
-    [playbackTimer invalidate];
-    playbackTimer = nil;
+- (void)closeMuteListening{
+    
+    if (playbackTimer) {
+        [playbackTimer invalidate];
+        playbackTimer = nil;
+    }
 }
 
 @end
