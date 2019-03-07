@@ -75,7 +75,7 @@ static void soundCompletionCallback (SystemSoundID mySSID, void* myself) {
                                            (__bridge void*) self);
     
     // Start the playback timer
-    playbackTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(incrementTimer) userInfo:nil repeats:YES];
+    playbackTimer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(incrementTimer) userInfo:nil repeats:YES];
     
 	// Play the sound
     AudioServicesPlaySystemSound(soundFileObject);
